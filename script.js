@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const citButton = document.getElementById("citButton");
     const busButton = document.getElementById("busButton");
-    const studentDataDiv = document.getElementById("studentData");
 
     citButton.addEventListener("click", function() {
         fetchData("CIT");
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function renderStudents(students) {
+        const studentDataDiv = document.getElementById("studentData");
         const source = document.getElementById("student-template").innerHTML;
         const template = Handlebars.compile(source);
         const context = { students: students };
