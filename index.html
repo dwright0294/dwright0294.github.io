@@ -11,6 +11,30 @@
 
     <div id="studentData"></div>
 
+    <!-- Handlebars Template -->
+    <script id="student-template" type="text/x-handlebars-template">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Major</th>
+                    <th>Midterm Score</th>
+                    <th>Final Exam Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each students}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{major}}</td>
+                    <td>{{midterm}}</td>
+                    <td>{{final}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="script.js"></script>
 </body>
